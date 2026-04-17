@@ -1,0 +1,24 @@
+{
+  "name": "bcopus",
+  "version": "1.0.0",
+  "description": "Fetches and displays a random Bloom County comic in your browser",
+  "main": "index.js",
+  "bin": {
+    "bcopus": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanew4/BCOpus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lanew4/BCOpus/issues"
+  },
+  "homepage": "https://github.com/lanew4/BCOpus#readme"
+}

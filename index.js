@@ -2,7 +2,6 @@
 
 const { execSync } = require('child_process');
 
-// Bloom County ran in two distinct periods
 const RANGES = [
   { start: new Date('1980-04-20'), end: new Date('1989-08-06') },
   { start: new Date('2015-07-12'), end: new Date() },
@@ -15,12 +14,10 @@ function daysBetween(a, b) {
 function randomDate() {
   const totalDays = RANGES.reduce((sum, r) => sum + daysBetween(r.start, r.end), 0);
   let pick = Math.floor(Math.random() * totalDays);
-
   for (const range of RANGES) {
     const span = daysBetween(range.start, range.end);
     if (pick < span) {
-      const date = new Date(range.start.getTime() + pick * 86400000);
-      return date;
+      return new Date(range.start.getTime() + pick * 86400000);
     }
     pick -= span;
   }
